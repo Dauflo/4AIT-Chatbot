@@ -1,0 +1,282 @@
+{
+  "id": "01a88cc1-d754-437e-a2e6-98b3c4f381fe",
+  "name": "4AIT",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "9f2d5fdd-5ca3-40fd-8deb-9b7607ba97b1",
+          "required": false,
+          "dataType": "@VacationPlaces",
+          "name": "VacationPlaces",
+          "value": "$VacationPlaces",
+          "isList": false
+        },
+        {
+          "id": "36e36a5c-9b07-4f88-81b9-45ef9b95123f",
+          "required": false,
+          "dataType": "@sys.number",
+          "name": "NumberOfPerson",
+          "value": "$NumberOfPerson",
+          "isList": false
+        },
+        {
+          "id": "4cf71a08-4bf3-48b1-975e-3276c4e81ab3",
+          "required": false,
+          "dataType": "@sys.duration",
+          "name": "Duration",
+          "value": "$Duration",
+          "isList": false
+        },
+        {
+          "id": "6f1fab96-3f6f-42d3-a072-a49a9cfbf4ee",
+          "required": false,
+          "dataType": "@sys.date",
+          "name": "Date",
+          "value": "$Date",
+          "isList": false
+        },
+        {
+          "id": "74718f53-d2ba-4d0c-b4d5-f44e38f634f2",
+          "required": false,
+          "dataType": "@sys.geo-city",
+          "name": "geo-city",
+          "value": "$geo-city",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "acac5576-9ad6-43de-88b6-56ce53480f6c",
+      "data": [
+        {
+          "text": "Je veux louer "
+        },
+        {
+          "text": "un",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hôtel",
+          "alias": "VacationPlaces",
+          "meta": "@VacationPlaces",
+          "userDefined": false
+        },
+        {
+          "text": " pour "
+        },
+        {
+          "text": "Londres",
+          "alias": "geo-city",
+          "meta": "@sys.geo-city",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "875c151d-7da8-4ea0-8fa9-7ef27ae7cbeb",
+      "data": [
+        {
+          "text": "Je veux "
+        },
+        {
+          "text": "une",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "villa",
+          "alias": "VacationPlaces",
+          "meta": "@VacationPlaces",
+          "userDefined": false
+        },
+        {
+          "text": " à "
+        },
+        {
+          "text": "Paris",
+          "alias": "geo-city",
+          "meta": "@sys.geo-city",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "0f259ab0-36a4-4e59-80f6-b8c475a5b8e4",
+      "data": [
+        {
+          "text": "Je veux une la "
+        },
+        {
+          "text": "maison",
+          "alias": "VacationPlaces",
+          "meta": "@VacationPlaces",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "du 12 au 20 septembre",
+          "alias": "Duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "0a764b36-414c-4d3f-af11-699d2dab84f7",
+      "data": [
+        {
+          "text": "Je veux louer "
+        },
+        {
+          "text": "une",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "résidence",
+          "alias": "VacationPlaces",
+          "meta": "@VacationPlaces",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pour 4 personnes",
+          "alias": "NumberOfPerson",
+          "meta": "@sys.number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "274c4a94-d81a-4f15-bc20-1737b335e330",
+      "data": [
+        {
+          "text": "Je cherche "
+        },
+        {
+          "text": "un",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "camping",
+          "alias": "VacationPlaces",
+          "meta": "@VacationPlaces",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pour 2",
+          "alias": "NumberOfPerson",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " à partir du "
+        },
+        {
+          "text": "23 juin",
+          "alias": "Date",
+          "meta": "@sys.date",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "e1d0860e-bfd7-4e01-ae21-cb2bef5b619f",
+      "data": [
+        {
+          "text": "Je veux "
+        },
+        {
+          "text": "une",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "maison",
+          "alias": "VacationPlaces",
+          "meta": "@VacationPlaces",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pendant 3 semaines",
+          "alias": "Duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}
