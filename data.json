@@ -1,0 +1,19 @@
+{
+    "city": [
+        "Paris",
+        "Londre",
+        "Madrid",
+        "Tokyo",
+        "New York",
+        "Las Vegas",
+        "Toulouse",
+        "Abu dhabi"
+    ],
+    "place": [
+        "hôtel",
+        "maison",
+        "résidence",
+        "villa",
+        "camping"
+    ]
+}
