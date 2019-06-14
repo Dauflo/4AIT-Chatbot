@@ -35,13 +35,15 @@ def create_fake_data(city='', number_of_person=0, place='', date='', duration=0)
 
         # SETUP DURATION, if equal 0, then generate a random one
         # Unit : day
-        if duration != 0:
+        if duration != 0 and duration != '':
             travel['duration'] = duration
         else:
             travel['duration'] = random.randint(7, 30)
 
         # SETUP DATE, if not exist, then generate a random one
+
         if date:
+            date = date.split('T')[0]
             date_infos = date.split('-')
             final_date = datetime.datetime(int(date_infos[0]), int(date_infos[1]), int(date_infos[2]))
             final_date += datetime.timedelta(days=random.randint(-5, 5))
@@ -50,9 +52,6 @@ def create_fake_data(city='', number_of_person=0, place='', date='', duration=0)
             final_date = datetime.datetime.today() + datetime.timedelta(days=random.randint(0, 30))
             travel['date'] = final_date.strftime('%d-%m-%Y')
 
-        print(travel)
         travel_results.append(travel)
 
     return travel_results
-
-create_fake_data('', 0, '', '', 0)
