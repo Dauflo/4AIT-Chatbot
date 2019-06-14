@@ -4,12 +4,12 @@ import fake_data_generation
 
 PHRASE_DIR = 'dialog/'
 
-BOT_NAME = 'Traves Lers'
+BOT_NAME = 'Travis Lers'
 INTRODUCTION = 'introduction.txt'
 INTRODUCTION_QUESTION = 'introduction_question.txt'
 SPECIFIC_QUESTION = 'specific_'
 
-FAKE_PHRASE = 'Je veux une maison '
+FAKE_PHRASE = 'Je cherche une villa '
 
 # Function used to convert duration (day) to metric like : mounth, week, day
 def duration_converteur(duration):
@@ -55,7 +55,7 @@ def process_specific_ask(data):
         if not v:
             specific_question_ask(k)
             data[k] = user_input(k)
-    print(data)
+    # print(data)
     travels = fake_data_generation.create_fake_data(data['city'], data['numberOfPerson'], data['place'], data['date'], data['duration'])
     show_possibilities(travels)
 
@@ -104,7 +104,6 @@ def main():
 
     while(not travel_data):
         travel_data = dialogflow_client_api.request(phrase)
-        print(travel_data)
         
     process_specific_ask(travel_data)
 

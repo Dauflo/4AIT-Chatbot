@@ -4,7 +4,6 @@ import random
 
 def check_city(city, data):
     for data_city in data:
-        print(city, data_city)
         if city.lower() == data_city.lower():
             return True
     return False
