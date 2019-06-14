@@ -29,7 +29,7 @@ def create_fake_data(city='', number_of_person=0, place='', date='', duration=0)
             travel['city'] = random.choice(data['city'])
 
         # SETUP PLACE, if not exist, then take a random one from data
-        if place and place.lower in data['place']:
+        if place and place.lower() in data['place']:
             travel['place'] = place
         else:
             travel['place'] = random.choice(data['place'])
