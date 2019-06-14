@@ -59,9 +59,6 @@ def process_specific_ask(data):
     travels = fake_data_generation.create_fake_data(data['city'], data['numberOfPerson'], data['place'], data['date'], data['duration'])
     show_possibilities(travels)
 
-def update_travel_data(data):
-    return data
-
 def user_input(option='none'):
     user_entry = input('Vous : ')
     
