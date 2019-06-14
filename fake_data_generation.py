@@ -2,6 +2,13 @@ import datetime
 import json
 import random
 
+def check_city(city, data):
+    for data_city in data:
+        print(city, data_city)
+        if city.lower() == data_city.lower():
+            return True
+    return False
+
 # Use to generate coherent fake data, in prodcution env, this would be an API call to a booking API
 def create_fake_data(city='', number_of_person=0, place='', date='', duration=0):
     data = None
@@ -16,13 +23,13 @@ def create_fake_data(city='', number_of_person=0, place='', date='', duration=0)
         travel = {}
 
         # SETUP CITY, if not exist, then take a random one from data
-        if city:
-            travel['city'] = city
+        if city and check_city(city, data['city']):
+            travel['city'] = city.capitalize()
         else:
             travel['city'] = random.choice(data['city'])
 
         # SETUP PLACE, if not exist, then take a random one from data
-        if place:
+        if place and place.lower in data['place']:
             travel['place'] = place
         else:
             travel['place'] = random.choice(data['place'])

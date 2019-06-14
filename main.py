@@ -102,7 +102,6 @@ def main():
     introduction_question()
 
     phrase = user_input()
-    phrase = 'Je cherche une villa'
     travel_data = None
     print()
 
