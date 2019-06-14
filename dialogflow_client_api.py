@@ -6,7 +6,6 @@ import sys
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'e4ait-xetqjb-2e38d957b618.json'
 
 PROJECT_ID = 'e4ait-xetqjb'
-PROJECT_ID = 'azerr'
 SESSION_ID = 'test'
 LANGUAGE_CODE = 'fr-FR'
 
